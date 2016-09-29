@@ -9,3 +9,7 @@ body {
 btn-posicao {
 	float: left;
 }
+
+.textMaiusculo {
+    text-transform: uppercase;
+}
