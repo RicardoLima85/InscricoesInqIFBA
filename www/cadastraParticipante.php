@@ -1,4 +1,7 @@
-﻿<?php include 'config/conexao.php'; ?>
+﻿<?php 
+	//include 'config/conexao.php'; 
+	include'config/variaveisglobais.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,75 +36,101 @@
     </nav>
 
     <div class="container-fluid ">
-        <span class="descricaoLogin">OBS: Preencha com dados corretos, esses serão os dados impressos em seu certificado</span>
+        <span class="descricaoLogin"><p>OBS: Preencha com dados corretos, esses serão os dados impressos em seu certificado</p></span>
         <form method="post" action="config/cadastraParticipante.class.php" id="formulario">
             <div class="row">
-				<div class="col-md-8 form-group">
-					 <input type="text" name="AlunoNome" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
+				<div class="col-md-9 form-group">
+					<label for="ParticipanteNome" class="labelTitulosForms">Nome</label>
+					<input type="text" name="ParticipanteNome" class="form-control textMaiusculo" required id="ParticipanteNome">
 				</div>
-            <div class="col-md-4 form-group">
-		  		<input type="text" name="AlunoDtNascimento" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Data de nascimento (Ex: 00/00/0000)">
-		  	</div>
+           		<div class="col-md-3 form-group">
+           			<label for="ParticipanteSexo" class="labelTitulosForms">Sexo</label>
+		  			<select class="form-control textMaiusculo" name="ParticipanteSexo" id="ParticipanteSexo" >
+		  				<option></option>
+					  	<option>FEMININO</option>
+					  	<option>MASCULINO</option>
+					</select>
+		  		</div>
 			</div>
             <div class="row">
+				 <div class="col-md-4 form-group">
+				 	<label for="ParticipanteDtNascimento" class="labelTitulosForms">Data de nascimento</label>
+					<input type="date" name="ParticipanteDtNascimento" class="form-control textMaiusculo" required id="ParticipanteDtNascimento">
+				</div>
 			  	<div class="col-md-4 form-group">
-			  		<input type="text" name="AlunoCPF" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CPF (Ex: 000.000.000-00)">
+			  		<label for="ParticipanteCPF" class="labelTitulosForms">CPF</label>
+			  		<input type="text" name="ParticipanteCPF" class="form-control textMaiusculo" required id="ParticipanteCPF">
 			  	</div>
 			  	<div class="col-md-4 form-group">
-			  		<input type="text" name="AlunoRG" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="RG">
-			  	</div>
-			  	<div class="col-md-4 form-group">
-			  		<input type="text" name="AlunoTelefone" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefone">
+			  		<label for="ParticipanteTelefone" class="labelTitulosForms">Telefone</label>
+			  		<input type="text" name="ParticipanteTelefone" class="form-control textMaiusculo" required id="ParticipanteTelefone">
 			  	</div>
 			</div>
            	<div class="row">
 				<div class="col-md-6 form-group">
-		  			<input type="text" name="AlunoEmail" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+	  				<label for="ParticipanteEmail" class="labelTitulosForms">Email</label>
+		  			<input type="text" name="ParticipanteEmail" class="form-control textMaiusculo" required id="ParticipanteEmail">
 		  		</div>
 			  	<div class="col-md-3 form-group">
-			  		<input type="password" name="AlunoSenha" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Senha">
+			  		<label for="ParticipanteSenha" class="labelTitulosForms">Senha</label>
+			  		<input type="password" name="ParticipanteSenha" class="form-control textMaiusculo" required id="ParticipanteSenha">
 			  	</div>
 			   	<div class="col-md-3 form-group">
-			  		<input type="password" name="AlunoSenhaRepete" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirme sua senha">
+			   		<label for="ParticipanteSenhaRepete" class="labelTitulosForms">Confirme sua senha</label>
+			  		<input type="password" name="ParticipanteSenhaRepete" class="form-control textMaiusculo" id="ParticipanteSenhaRepete">
 			  	</div>
 			</div>
            	<div class="row">
-				<div class="col-md-4 form-group">
-		  			<select class="form-control textMaiusculo" name="AlunoEstuda">
+				<div class="col-md-2 form-group">
+	  				<label for="ParticipanteEstuda" class="labelTitulosForms">Estuda?</label>
+		  			<select class="form-control textMaiusculo" name="ParticipanteEstuda" id="ParticipanteEstuda">
 					  <option>SIM</option>
 					  <option>NÃO</option>
 					</select>
 		  		</div>
-			  	<div class="col-md-4 form-group">
-			  		<input type="text" name="AlunoEstudaOnde" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Onde estuda?">
+			  	<div class="col-md-3 form-group">
+			  		<label for="ParticipanteEstudaInstituicao" class="labelTitulosForms">Qual instituição?</label>
+			  		<input type="text" name="ParticipanteEstudaInstituicao" class="form-control textMaiusculo" id="ParticipanteEstudaInstituicao">
+			  	</div>
+			  	<div class="col-md-3 form-group">
+			  		<label for="ParticipanteCampus" class="labelTitulosForms">Qual campus?</label>
+			  		<input type="text" name="ParticipanteCampus" class="form-control textMaiusculo" id="ParticipanteCampus">
 			  	</div>
 			   	<div class="col-md-4 form-group">
-			  		<input type="text" name="AlunoEstudaOque" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Qual curso?">
+			   		<label for="ParticipanteCurso" class="labelTitulosForms">Qual curso?</label>
+			  		<input type="text" name="ParticipanteCurso" class="form-control textMaiusculo" id="ParticipanteCurso">
 			  	</div>
 			</div>
            	<div class="row">
 				<div class="col-md-6 form-group">
-		  			<input type="text" name="AlunoEndereco" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Endereço">
+	  				<label for="ParticipanteEndereco" class="labelTitulosForms">Endereço</label>
+		  			<input type="text" name="ParticipanteEndereco" class="form-control textMaiusculo" id="ParticipanteEndereco">
 		  		</div>
 			  	<div class="col-md-6 form-group">
-			  		<input type="text" name="AlunoBairro" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Bairro">
+			  		<label for="ParticipanteBairro" class="labelTitulosForms">Bairro</label>
+			  		<input type="text" name="ParticipanteBairro" class="form-control textMaiusculo" id="ParticipanteBairro">
 			  	</div>
 			</div>
            	<div class="row">
 				<div class="col-md-4 form-group">
-		  			<select class="form-control textMaiusculo" name="AlunoEstado">
+	  				<label for="ParticipanteEstado" class="labelTitulosForms">Estado</label>
+		  			<select class="form-control textMaiusculo" name="ParticipanteEstado" id="ParticipanteEstado">
 					  <option>Carrega estado</option>
 					</select>
 		  		</div>
 		  		<div class="col-md-5 form-group">
-					<select class="form-control textMaiusculo" name="AlunCidade">
+		  			<label for="ParticipanteCidade" class="labelTitulosForms">Cidade</label>
+					<select class="form-control textMaiusculo" name="ParticipanteCidade" id="ParticipanteCidade">
 						<option>Carrega cidade</option>
 					</select>
 				</div>
 			  	<div class="col-md-3 form-group">
-			  		<input type="text" name="AlunoCep" class="form-control textMaiusculo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Cep">
+			  		<label for="ParticipanteCep" class="labelTitulosForms">CEP</label>
+			  		<input type="text" name="ParticipanteCep" class="form-control textMaiusculo" id="ParticipanteCep">
 			  	</div>
 			</div>
+          	<!--hidden campos-->
+          	<input type="hidden" id="dataCadastro" name="fone" value="<?php echo $date; ?>">
             <button type="submit" class="btn btn-primary btn-posicao">Cadastrar</button>
         </form>
     </div>

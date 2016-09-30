@@ -13,3 +13,8 @@ btn-posicao {
 .textMaiusculo {
     text-transform: uppercase;
 }
+
+.labelTitulosForms {
+	font-size: 0.9em;
+	color: #676767;
+}

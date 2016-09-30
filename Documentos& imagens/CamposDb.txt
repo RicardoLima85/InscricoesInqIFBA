@@ -1,0 +1,11 @@
+CURSO
+`cd_cursos`, `dt_curso`, `nm_curso`, `objetivo_curso`, `conteudo_curso`, `publico_curso`, `horario_curso`, `local_curso`, `nm_professor`, `limite_participante_curso`, `hr_carga_horaria_curso`, `eventos_cd_evento`, `tipo_curso`
+-------------------------------------------------------------------------------
+EVENTOS
+`cd_evento`, `nm_evento`, `sigla_evento`, `ds_evento`, `nm_responsavel`, `local_evento`, `limite_participante`, `dt_inicio_evento`, `dt_fim_evento`, `dt_inicio_inscricao`, `dt_fim_inscricao`, `termo`, `necessidades_especiais`, `qual_necessidade_especial`, `site`, `edicao_evento`, `status_eventos`
+-------------------------------------------------------------------------------
+PARTICIPANTES
+`cd_participante`, `data_cadastro`, `nivel_participante`, `nm_participante`, `sexo`, `cpf`, `dt_nascimento`, `email`, `senha`, `telefone`, `estuda`, `estuda_intituicao`, `estuda_campus`, `estuda_curso`, `endereco`, `bairro`, `estado`, `cidade`
+-------------------------------------------------------------------------------
+INSCRIÇÃO EVENTOS
+`participantes_cd_participante`, `eventos_cd_evento`, `tipo_participante`

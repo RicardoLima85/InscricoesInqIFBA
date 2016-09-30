@@ -2,35 +2,25 @@
 
 /*************** COMEÇO: INSERT de participantes ***************/
 
-$aluno  				= ($_REQUEST['AlunoNome']);
-$dtNascimento			= ($_REQUEST['AlunoDtNascimento']);
-$cpf					= ($_REQUEST['AlunoCPF']);
-$rg 	 				= ($_REQUEST['AlunoRG']);
-$telefone 				= ($_REQUEST['AlunoTelefone']);
-$email 					= ($_REQUEST['AlunoEmail']);
-$senha	 				= ($_REQUEST['AlunoSenha']);
-$estuda	 				= ($_REQUEST['AlunoEstuda']);
-$estudaOnde				= ($_REQUEST['AlunoEstudaOnde']);
-$estudaOque 			= ($_REQUEST['AlunoEstudaOque']);
-$endereco 				= ($_REQUEST['AlunoEndereco']);
-$bairro	 				= ($_REQUEST['AlunoBairro']);
-$estado	 				= ($_REQUEST['AlunoEstado']);
-$cidade	 				= ($_REQUEST['AlunCidade']);
-$cep	 				= ($_REQUEST['AlunoCep']);
+$nmParticipante  		= strtoupper($_REQUEST['ParticipanteNome']);
+$sexo			 		= strtoupper($_REQUEST['ParticipanteSexo']);
+$dtNascimento			= ($_REQUEST['ParticipanteDtNascimento']);
+$cpf					= ($_REQUEST['ParticipanteCPF']);
+$telefone 				= ($_REQUEST['ParticipanteTelefone']);
+$email 					= strtolower($_REQUEST['ParticipanteEmail']);
+$senha	 				= ($_REQUEST['ParticipanteSenha']);
+$estuda	 				= strtoupper($_REQUEST['ParticipanteEstuda']);
+$estudaInstituicao		= strtoupper($_REQUEST['ParticipanteEstudaInstituicao']);
+$estudaCampus			= strtoupper($_REQUEST['ParticipanteCampus']);
+$estudaCurso 			= strtoupper($_REQUEST['ParticipanteEstudaOque']);
+$endereco 				= strtoupper($_REQUEST['ParticipanteEndereco']);
+$bairro	 				= strtoupper($_REQUEST['ParticipanteBairro']);
+$estado	 				= strtoupper($_REQUEST['ParticipanteEstado']);
+$cidade	 				= strtoupper($_REQUEST['ParticipanteCidade']);
+$cep	 				= ($_REQUEST['ParticipanteCep']);
 
-//Converter para minusculo
-$email = strtolower($email);
-//Converter para MAIUSCULO
-$aluno 		= strtoupper($aluno);
-$estuda 	= strtoupper($estuda);
-$estudaOnde = strtoupper($estudaOnde);
-$estudaOque = strtoupper($estudaOque);
-$endereco	= strtoupper($endereco);
-$bairro 	= strtoupper($bairro);
-$estado 	= strtoupper($estado);
-$cidade 	= strtoupper($cidade);
 
-$InseriParticipante  = "INSERT INTO atividade (atv_atividade, atv_outra_atividade, atv_fone, atv_data)
+$InseriParticipante  = "INSERT INTO participantes (data_cadastro, atv_outra_atividade, atv_fone, atv_data)
     VALUES ('$atividade', '$outraAtividade', '$fone', '$data')";
 $resultado = mysql_query($InseriParticipante);
 
