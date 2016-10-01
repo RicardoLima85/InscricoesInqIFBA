@@ -129,6 +129,19 @@
 			  		<input type="text" name="ParticipanteCep" class="form-control textMaiusculo" id="ParticipanteCep">
 			  	</div>
 			</div>
+         		<div class="row">
+				<div class="col-md-4 form-group">
+	  				<label for="ParticipanteNecessidadeEspecial" class="labelTitulosForms">Possui alguma necessidade especial?</label>
+	  				<select class="form-control textMaiusculo" name="ParticipanteNecessidadeEspecial" id="ParticipanteNecessidadeEspecial">
+						<option>NÃO</option>
+						<option>SIM</option>
+					</select>
+		  		</div>
+		  		<div class="col-md-8 form-group">
+		  			<label for="ParticipanteNecessidadeEspecialQual" class="labelTitulosForms">Qual a necessidade especial?</label>
+					<input type="text" name="ParticipanteNecessidadeEspecialQual" class="form-control textMaiusculo" id="ParticipanteNecessidadeEspecialQual">
+				</div>
+			</div>
           	<!--hidden campos-->
           	<input type="hidden" id="dataCadastro" name="fone" value="<?php echo $date; ?>">
             <button type="submit" class="btn btn-primary btn-posicao">Cadastrar</button>

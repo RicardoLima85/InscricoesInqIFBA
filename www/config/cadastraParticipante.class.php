@@ -18,6 +18,12 @@ $bairro	 				= strtoupper($_REQUEST['ParticipanteBairro']);
 $estado	 				= strtoupper($_REQUEST['ParticipanteEstado']);
 $cidade	 				= strtoupper($_REQUEST['ParticipanteCidade']);
 $cep	 				= ($_REQUEST['ParticipanteCep']);
+$necessidadeEspecial	= ($_REQUEST['ParticipanteNecessidadeEspecial']);
+$qualNecessidadeEsp		= ($_REQUEST['ParticipanteNecessidadeEspecialQual']);
+$dtCadastro 			= ($_REQUEST['dataCadastro']); 
+
+
+// trata data = $dtCadastro = date("d-m-Y",strtotime($dtCadastro))
 
 
 $InseriParticipante  = "INSERT INTO participantes (data_cadastro, atv_outra_atividade, atv_fone, atv_data)
