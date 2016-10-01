@@ -1,33 +1,34 @@
 <?php include 'conexao.php';
-
+mysql_set_charset('utf8');
 /*************** COMEÇO: INSERT de participantes ***************/
 
-$nmParticipante  		= strtoupper($_REQUEST['ParticipanteNome']);
-$sexo			 		= strtoupper($_REQUEST['ParticipanteSexo']);
+$nmParticipante  		= ($_REQUEST['ParticipanteNome']);
+$sexo			 		= ($_REQUEST['ParticipanteSexo']);
 $dtNascimento			= ($_REQUEST['ParticipanteDtNascimento']);
 $cpf					= ($_REQUEST['ParticipanteCPF']);
 $telefone 				= ($_REQUEST['ParticipanteTelefone']);
-$email 					= strtolower($_REQUEST['ParticipanteEmail']);
+$email 					= ($_REQUEST['ParticipanteEmail']);
 $senha	 				= ($_REQUEST['ParticipanteSenha']);
-$estuda	 				= strtoupper($_REQUEST['ParticipanteEstuda']);
-$estudaInstituicao		= strtoupper($_REQUEST['ParticipanteEstudaInstituicao']);
-$estudaCampus			= strtoupper($_REQUEST['ParticipanteCampus']);
-$estudaCurso 			= strtoupper($_REQUEST['ParticipanteEstudaOque']);
-$endereco 				= strtoupper($_REQUEST['ParticipanteEndereco']);
-$bairro	 				= strtoupper($_REQUEST['ParticipanteBairro']);
-$estado	 				= strtoupper($_REQUEST['ParticipanteEstado']);
-$cidade	 				= strtoupper($_REQUEST['ParticipanteCidade']);
+$estuda	 				= ($_REQUEST['ParticipanteEstuda']);
+$estudaInstituicao		= ($_REQUEST['ParticipanteEstudaInstituicao']);
+$estudaCampus			= ($_REQUEST['ParticipanteCampus']);
+$estudaCurso 			= ($_REQUEST['ParticipanteCurso']);
+$endereco 				= ($_REQUEST['ParticipanteEndereco']);
+$bairro	 				= ($_REQUEST['ParticipanteBairro']);
+$estado	 				= ($_REQUEST['ParticipanteEstado']);
+$cidade	 				= ($_REQUEST['ParticipanteCidade']);
 $cep	 				= ($_REQUEST['ParticipanteCep']);
 $necessidadeEspecial	= ($_REQUEST['ParticipanteNecessidadeEspecial']);
 $qualNecessidadeEsp		= ($_REQUEST['ParticipanteNecessidadeEspecialQual']);
 $dtCadastro 			= ($_REQUEST['dataCadastro']); 
 
-
 // trata data = $dtCadastro = date("d-m-Y",strtotime($dtCadastro))
 
+$InseriParticipante  = "INSERT INTO participantes (data_cadastro, nm_participante, sexo, cpf, dt_nascimento, email, senha, telefone, estuda,
+													estuda_instituicao, estuda_campus, estuda_curso, endereco, bairro, estado, cidade, cep, necessidades_especiais, qual_necessidade_especial)
+    					VALUES ( '$dtCadastro', '$nmParticipante', '$sexo', '$cpf', '$dtNascimento', '$email', '$senha', '$telefone', '$estuda', '$estudaInstituicao',
+								'$estudaCampus', '$estudaCurso', '$endereco', '$bairro', '$estado', '$cidade', '$cep', '$necessidadeEspecial', '$qualNecessidadeEsp')";
 
-$InseriParticipante  = "INSERT INTO participantes (data_cadastro, atv_outra_atividade, atv_fone, atv_data)
-    VALUES ('$atividade', '$outraAtividade', '$fone', '$data')";
 $resultado = mysql_query($InseriParticipante);
 
 
@@ -69,5 +70,5 @@ $totalAtividade = mysql_num_rows($dadosAtividade);
 ?>
 
 <script language= "JavaScript">
-    location.href="../sucesso.php?fone=<?php echo $fone?>"
+  //  location.href="../sucesso.php?fone=<?php // echo $fone?>"
 </script>

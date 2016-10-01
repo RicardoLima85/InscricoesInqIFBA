@@ -1,5 +1,4 @@
 ﻿<?php 
-	//include 'config/conexao.php'; 
 	include'config/variaveisglobais.php';
 ?>
 <!DOCTYPE html>
@@ -10,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>INSCRIÇÕES</title>
+    <title>INSCRI&Ccedil;&Otilde;ES</title>
     <!-- Personalizados -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -30,13 +29,13 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <p class="navbar-text titulo">CADSTRO DO PARTICIPANTE</p>
+                <p class="navbar-text titulo">CADASTRO DO PARTICIPANTE</p>
             </div>
         </div>
     </nav>
 
     <div class="container-fluid ">
-        <span class="descricaoLogin"><p>OBS: Preencha com dados corretos, esses serão os dados impressos em seu certificado</p></span>
+        <span class="descricaoLogin"><p>OBS: Preencha com dados corretos, esses ser&atilde;o os dados impressos em seu certificado</p></span>
         <form method="post" action="config/cadastraParticipante.class.php" id="formulario">
             <div class="row">
 				<div class="col-md-9 form-group">
@@ -85,11 +84,11 @@
 	  				<label for="ParticipanteEstuda" class="labelTitulosForms">Estuda?</label>
 		  			<select class="form-control textMaiusculo" name="ParticipanteEstuda" id="ParticipanteEstuda">
 					  <option>SIM</option>
-					  <option>NÃO</option>
+					  <option>N&Atilde;O</option>
 					</select>
 		  		</div>
 			  	<div class="col-md-3 form-group">
-			  		<label for="ParticipanteEstudaInstituicao" class="labelTitulosForms">Qual instituição?</label>
+			  		<label for="ParticipanteEstudaInstituicao" class="labelTitulosForms">Qual institui&ccedil;&atilde;o?</label>
 			  		<input type="text" name="ParticipanteEstudaInstituicao" class="form-control textMaiusculo" id="ParticipanteEstudaInstituicao">
 			  	</div>
 			  	<div class="col-md-3 form-group">
@@ -103,7 +102,7 @@
 			</div>
            	<div class="row">
 				<div class="col-md-6 form-group">
-	  				<label for="ParticipanteEndereco" class="labelTitulosForms">Endereço</label>
+	  				<label for="ParticipanteEndereco" class="labelTitulosForms">Endere&ccedil;o</label>
 		  			<input type="text" name="ParticipanteEndereco" class="form-control textMaiusculo" id="ParticipanteEndereco">
 		  		</div>
 			  	<div class="col-md-6 form-group">
@@ -133,7 +132,7 @@
 				<div class="col-md-4 form-group">
 	  				<label for="ParticipanteNecessidadeEspecial" class="labelTitulosForms">Possui alguma necessidade especial?</label>
 	  				<select class="form-control textMaiusculo" name="ParticipanteNecessidadeEspecial" id="ParticipanteNecessidadeEspecial">
-						<option>NÃO</option>
+						<option>N&Atilde;O</option>
 						<option>SIM</option>
 					</select>
 		  		</div>
@@ -143,8 +142,8 @@
 				</div>
 			</div>
           	<!--hidden campos-->
-          	<input type="hidden" id="dataCadastro" name="fone" value="<?php echo $date; ?>">
-            <button type="submit" class="btn btn-primary btn-posicao">Cadastrar</button>
+          	<input type="hidden" id="dataCadastro" name="dataCadastro" value="<?php echo $date; ?>">
+            <button type="submit" class="btn btn-primary btn-posicao">PROXIMA ETAPA</button>
         </form>
     </div>
     
